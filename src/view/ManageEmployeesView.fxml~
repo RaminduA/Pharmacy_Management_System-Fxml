@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="980.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageEmployeesViewController">
+   <children>
+      <ImageView fitHeight="980.0" fitWidth="1520.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/DashboardBG2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="633.0" fitWidth="1464.0" layoutX="33.0" layoutY="316.0" pickOnBounds="true" />
+      <TableView fx:id="tblEmployeeList" cache="true" layoutX="26.0" layoutY="269.0" prefHeight="687.0" prefWidth="1467.0" style="-fx-background-color: Transparent;" stylesheets="@../style/tableStyles.css">
+         <columns>
+            <TableColumn fx:id="colEmployeeId" prefWidth="637.66672706604" text="Employee ID" />
+            <TableColumn fx:id="colName" prefWidth="637.66672706604" text="Name" />
+            <TableColumn fx:id="colUserId" prefWidth="244.0" text="User ID" />
+            <TableColumn fx:id="colAddress" prefWidth="828.3333129882812" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="244.0" text="Contact" />
+            <TableColumn fx:id="colOccupation" prefWidth="244.0" text="Occupation" />
+            <TableColumn fx:id="colSalary" prefWidth="244.0" text="Salary" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXTextField fx:id="employeeSearchBar" layoutX="71.0" layoutY="195.0" prefHeight="42.0" prefWidth="314.0" promptText="Search here..." style="-fx-background-color: white;">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </JFXTextField>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="923.0" layoutY="192.0" onAction="#addEmployeeOnAction" prefHeight="47.0" prefWidth="148.0" ripplerFill="#1689c2" style="-fx-background-color: #006da7; -fx-background-radius: 30;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="1113.0" layoutY="192.0" onAction="#updateEmployeeOnAction" prefHeight="47.0" prefWidth="148.0" ripplerFill="#1689c2" style="-fx-background-color: #006da7; -fx-background-radius: 30;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="1303.0" layoutY="192.0" onAction="#deleteEmployeeOnAction" prefHeight="47.0" prefWidth="148.0" ripplerFill="#1689c2" style="-fx-background-color: #006da7; -fx-background-radius: 30;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="32.0" layoutY="31.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtEmpId" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="E-001" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="98.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Employee ID" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="328.0" layoutY="31.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtEmpName" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="Mahela Jayawardene" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="124.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Employee Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="624.0" layoutY="31.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtEmpAddress" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="Colombo 7" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="138.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Employee Address" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="920.0" layoutY="31.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtEmpContact" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="077-7568836" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="137.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Employee Contact" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1216.0" layoutY="31.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtOccupation" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="Pharmacist" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="91.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Occupation" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="328.0" layoutY="108.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtSalary" editable="false" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="65000.00" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="53.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Salary" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="626.0" layoutY="108.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtUderId" editable="false" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="U-001" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="User ID" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="920.0" layoutY="108.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtUsername" editable="false" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="user2234" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="81.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Username" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1216.0" layoutY="108.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtPassword" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="*******" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="77.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Password" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

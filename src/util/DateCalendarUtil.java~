@@ -1,0 +1,57 @@
+package util;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+public class DateCalendarUtil {
+
+    public static String getDate(String period) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String oldDate=sdf.format(new Date());
+        /*String[] st=oldDate.split(" ");
+        int count=Integer.valueOf(st[0]);
+        String unit=st[1];
+        Calendar c = Calendar.getInstance();
+        try{
+            c.setTime(sdf.parse(oldDate));
+        }catch(ParseException e){
+            e.printStackTrace();
+        }
+        c.add(getField(unit), count);
+        return sdf.format(c.getTime());*/
+
+
+        String[] st=period.split(" ");
+        int count=Integer.parseInt(st[0]);
+        String unit=st[1];
+        Calendar c = Calendar.getInstance();
+        try{
+            c.setTime(sdf.parse(oldDate));
+        }catch(ParseException e){
+            e.printStackTrace();
+        }
+        switch(unit){
+            case "weeks":
+                c.add(Calendar.WEEK_OF_MONTH, count);
+            case "months":
+                c.add(Calendar.MONTH, count);
+            case "years":
+                c.add(Calendar.YEAR, count);
+        }
+        return sdf.format(c.getTime());
+    }
+
+    private static int getField(String unit) {
+        switch(unit){
+            case "weeks":
+                return Calendar.WEEK_OF_MONTH;
+            case "months":
+                return Calendar.MONTH;
+            case "years":
+                return Calendar.YEAR;
+        }
+        return 0;
+    }
+}

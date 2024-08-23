@@ -1,0 +1,26 @@
+.button-default{
+    -fx-background-color: linear-gradient(to bottom right, #2192cd, #016296);
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 30;
+    -fx-font-size: 21;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button-update{
+    -fx-background-color: linear-gradient(to bottom right, #17b01a, #1a7e13);
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 30;
+    -fx-font-size: 21;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button-delete{
+    -fx-background-color: linear-gradient(to bottom right, #fd4343, #c80303);
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 30;
+    -fx-font-size: 21;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}

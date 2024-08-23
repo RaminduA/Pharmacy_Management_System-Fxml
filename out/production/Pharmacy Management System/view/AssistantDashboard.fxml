@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="dashboardContext" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AssistantDashboardController">
+   <children>
+      <AnchorPane fx:id="performanceContext" layoutX="400.0" layoutY="100.0" prefHeight="980.0" prefWidth="1520.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="980.0" fitWidth="1520.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asset/DashboardBG2.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="100.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Label fx:id="lblDate" layoutX="806.0" layoutY="21.0" prefHeight="54.0" prefWidth="690.0" text="Wednesday, 15 September 2020" textFill="#006da7">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" alignment="CENTER" layoutX="440.0" layoutY="20.0" prefHeight="56.0" prefWidth="264.0" text="10:59:35 PM" textFill="#006da7">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblUserId" alignment="CENTER" layoutX="1646.0" layoutY="19.0" prefHeight="56.0" prefWidth="264.0" text="user : U-001" textFill="#006da7">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sidePanel" prefHeight="1080.0" prefWidth="400.0" style="-fx-background-color: #63ACD7;">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <ImageView fitHeight="95.0" fitWidth="182.0" layoutX="113.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/CompanyLogo.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="133.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/AssistantAvatar.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="43.0" layoutY="283.0" prefHeight="54.0" prefWidth="304.0" text="Assistant" textFill="#006da7">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="40.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="logoutButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="74.0" layoutY="928.0" onAction="#backToLoginForm" prefHeight="56.0" prefWidth="242.0" ripplerFill="BLACK" style="-fx-background-color: #006da7;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
+            <JFXButton fx:id="btnManageCustomers" alignment="BASELINE_LEFT" buttonType="RAISED" contentDisplay="CENTER" layoutX="1.0" layoutY="379.0" onAction="#manageCustomersOnAction" prefHeight="85.0" prefWidth="400.0" ripplerFill="#4a98c8" style="-fx-background-color: #4a98c8;" text="Manage Customers" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="90.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView accessibleRole="BUTTON" fill="WHITE" glyphName="USER_PLUS" size="27" strokeType="INSIDE" translateX="-145.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnPlaceOrder" alignment="BASELINE_LEFT" buttonType="RAISED" contentDisplay="CENTER" layoutY="468.0" onAction="#placeOrderOnAction" prefHeight="85.0" prefWidth="400.0" ripplerFill="#4a98c8" style="-fx-background-color: #4a98c8;" text="Place Order" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="90.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView accessibleRole="BUTTON" fill="WHITE" glyphName="CART_ARROW_DOWN" size="35" strokeType="INSIDE" textAlignment="JUSTIFY" translateX="-105.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnManageOrders" alignment="BASELINE_LEFT" buttonType="RAISED" contentDisplay="CENTER" layoutY="557.0" onAction="#manageOrdersOnAction" prefHeight="85.0" prefWidth="400.0" ripplerFill="#4a98c8" style="-fx-background-color: #4a98c8;" text="Manage Orders" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="90.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView accessibleRole="BUTTON" fill="WHITE" glyphName="CUBES" size="27" strokeType="INSIDE" translateX="-123.0" />
+               </graphic>
+            </JFXButton>
+            <Label layoutX="18.0" layoutY="1041.0" prefHeight="33.0" prefWidth="141.0" text="VERSION 1.0.0" textFill="#0b5479">
+               <font>
+                  <Font name="System Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

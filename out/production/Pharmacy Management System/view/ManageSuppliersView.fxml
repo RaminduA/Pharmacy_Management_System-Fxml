@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="980.0" prefWidth="1520.0" stylesheets="@../style/buttonStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageSuppliersViewController">
+   <children>
+      <ImageView fitHeight="980.0" fitWidth="1520.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/DashboardBG2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="493.0" fitWidth="1464.0" layoutX="33.0" layoutY="456.0" pickOnBounds="true" />
+      <TableView fx:id="tblSupplierList" cache="true" layoutX="26.0" layoutY="414.0" prefHeight="542.0" prefWidth="1467.0" style="-fx-background-color: Transparent;" stylesheets="@../style/tableStyles.css">
+         <columns>
+            <TableColumn fx:id="colSupplierId" prefWidth="637.66672706604" text="Supplier Id" />
+            <TableColumn fx:id="colName" prefWidth="637.66672706604" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="828.3333129882812" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="244.0" text="Contact" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXTextField fx:id="supplierSearchBar" layoutX="72.0" layoutY="343.0" prefHeight="42.0" prefWidth="314.0" promptText="Search here..." style="-fx-background-color: white;">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </JFXTextField>
+      <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="760.0" layoutY="46.0" onAction="#addSupplierOnAction" prefHeight="47.0" prefWidth="148.0" ripplerFill="#479045" styleClass="button-default" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="1306.0" layoutY="48.0" onAction="#updateSupplierOnAction" prefHeight="47.0" prefWidth="148.0" ripplerFill="#479045" styleClass="button-update" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="1306.0" layoutY="119.0" onAction="#deleteSupplierOnAction" prefHeight="47.0" prefWidth="148.0" ripplerFill="#479045" styleClass="button-delete" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="440.0" layoutY="58.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtSupId1" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="S-001" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="89.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Supplier ID" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="440.0" layoutY="138.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtSupName1" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="Mahela Jayawardene" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="115.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Supplier Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="440.0" layoutY="218.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtSupAddress1" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="Colombo 7" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="130.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Supplier Address" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="440.0" layoutY="298.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtSupContact1" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="077-7568836" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="128.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Supplier Contact" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="986.0" layoutY="58.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtSupId2" editable="false" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="S-001" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="89.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Supplier ID" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="986.0" layoutY="138.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtSupName2" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="Mahela Jayawardene" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="115.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Supplier Name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="986.0" layoutY="218.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtSupAddress2" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="Colombo 7" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="130.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Supplier Address" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="986.0" layoutY="298.0" prefHeight="53.0" prefWidth="269.0" styleClass="textPane" stylesheets="@../style/textFieldStyles.css">
+         <children>
+            <TextField fx:id="txtSupContact2" layoutX="13.0" layoutY="5.0" prefHeight="44.0" prefWidth="233.0" promptText="077-7568836" styleClass="textField">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+            <Label layoutX="13.0" prefHeight="5.0" prefWidth="128.0" style="-fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="-9.0" styleClass="textLabel" text="Supplier Contact" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

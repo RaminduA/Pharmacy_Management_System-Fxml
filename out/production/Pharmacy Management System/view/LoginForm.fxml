@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: TRANSPARENT;" stylesheets="@../style/buttonStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/LoginViewBG.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="202.0" fitWidth="356.0" layoutX="384.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/CompanyLogo.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="loginContext" layoutX="1170.0" layoutY="87.0" prefHeight="900.0" prefWidth="650.0" style="-fx-background-color: linear-gradient(to bottom Right, #FFFFFF, #FFFFFF, #FFFFFF , #c1f15f, #57B51C, #3E8D16, #125729);">
+         <children>
+            <ImageView fitHeight="900.0" fitWidth="650.0" layoutY="1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asset/LoginContextBG.jpg" />
+               </image>
+            </ImageView>
+            <FontAwesomeIconView fill="#006da7" glyphName="USERS" layoutX="279.0" layoutY="165.0" size="80" />
+            <Label alignment="CENTER" layoutX="212.0" layoutY="185.0" prefHeight="54.0" prefWidth="214.0" text="User Login" textFill="#4a98c8">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="157.0" layoutY="354.0" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #B5DDF6;" text="Username" textFill="#4a98c8">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUsername" focusColor="#4a98c8" layoutX="136.0" layoutY="393.0" prefHeight="50.0" prefWidth="375.0" style="-fx-background-color: white;" unFocusColor="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </JFXTextField>
+            <Label layoutX="157.0" layoutY="492.0" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #BCE5F7;" text="Password" textFill="#4a98c8">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="txtPassword" focusColor="#4a98c8" layoutX="136.0" layoutY="530.0" prefHeight="50.0" prefWidth="375.0" style="-fx-background-color: white;" unFocusColor="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </JFXPasswordField>
+            <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="237.0" layoutY="667.0" onAction="#loadDashboardsOnAction" prefHeight="55.0" prefWidth="176.0" ripplerFill="#4a98c8" styleClass="button-default" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="148.0" layoutY="728.0" opacity="0.8" prefHeight="41.0" prefWidth="351.0" style="-fx-background-color: #C5EAFA;" />
+            <Label alignment="CENTER" layoutX="138.0" layoutY="728.0" prefHeight="40.0" prefWidth="371.0" text="Forgot your password? Need help?" textFill="#006da7">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label alignment="BOTTOM_RIGHT" layoutX="652.0" layoutY="1037.0" prefHeight="33.0" prefWidth="402.0" text="Copyright © 2021 Scorpion™ - All rights reserved" textFill="#4a98c8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="1037.0" prefHeight="33.0" prefWidth="141.0" text="VERSION 1.0.0" textFill="#4a98c8">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
